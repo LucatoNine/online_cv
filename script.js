@@ -67,15 +67,14 @@ document.addEventListener('DOMContentLoaded', function() {
             experienceSections.forEach(otherSection => {
                 if (otherSection !== section) {
                     otherSection.querySelector('.details').classList.remove('show');
-                    otherSection.querySelector('.image-container').classList.remove('show');
                 }
             });
 
             // Afficher les détails de cette section
             const details = section.querySelector('.details');
-            const image = section.querySelector('.image-container');
             details.classList.toggle('show');
             image.classList.toggle('show');
         });
     });
 });
+
