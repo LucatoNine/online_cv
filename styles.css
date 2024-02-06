@@ -1,6 +1,6 @@
 /* GENERAL */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Calibri', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f2f2e8; /* Couleur de fond claire */
@@ -16,7 +16,7 @@ header {
     top: 0;
     width: 100%;
     background-color: #001f3f; /* Couleur de fond pour la barre de navigation */
-    padding: 25px 0;
+    padding: 35px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 999;
     transition: background-color 0.3s;
@@ -30,7 +30,7 @@ header .container {
 
 header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 30px;
     color: #fff; /* Couleur de texte pour le titre */
 }
 
@@ -48,7 +48,7 @@ nav ul li {
 nav ul li a {
     color: #fff; /* Couleur de texte pour les liens de navigation */
     text-decoration: none;
-    font-size: 16px;
+    font-size: 25px;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
@@ -63,7 +63,7 @@ main {
 }
 
 footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     background-color: #001f3f; /* Couleur de fond pour le pied de page */
@@ -98,42 +98,47 @@ section {
 
 .container h2 {
     margin-top: 0;
-    font-size: 28px;
+    font-size: 18px;
     color: #333; /* Couleur de titre pour le contenu */
 }
 
 .container p {
     color: #666; /* Couleur de texte secondaire */
-    font-size: 16px;
+    font-size: 13px;
 }
 
 /* ACCUEIL */
 
+.accueil    {
+    display: grid;
+    grid-template-columns: 2;
+}
+
 /* Nouvelle classe pour la section héros */
 .hero-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: space-between;
 }
 
 /* Style de la nouvelle image héros */
 .hero-image {
-    width: 45%; /* Largeur de l'image héros */
-    height: 100vh; /* Hauteur de la fenêtre d'affichage */
-    background-image: url('chemin/vers/votre-image.jpg'); /* Remplacez 'chemin/vers/votre-image.jpg' par le chemin de votre image */
+    width: 65%; /* Largeur de l'image héros */
+    height: 85vh; /* Hauteur de la fenêtre d'affichage */
+    background-image: url('./images/picture.png'); 
     background-size: cover;
     background-position: center;
+    margin-bottom: -20px;
 }
 
 /* Style du contenu héros */
 .hero-content {
-    width: 45%; /* Largeur du contenu héros */
+    width: 60%; /* Largeur du contenu héros */
     padding: 0 20px;
     text-align: center;
-    color: #fff; /* Couleur du texte */
+    color: #4a90e2; /* Couleur du texte */
 }
-
-
 
 
 /* EXPERIENCES */
@@ -142,20 +147,21 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, auto);
 }
 
 .experience-section {
     width: 80%; /* Ajuster la largeur selon vos besoins */
     max-width: 800px; /* Largeur maximale pour éviter que la section ne devienne trop large */
-    margin: 20px auto; /* Centrer horizontalement */
-    padding: 15px; /* Ajouter un espace intérieur */
+    margin: 40px auto; /* Centrer horizontalement */
+    padding: 20px 20px 10px 20px ; /* Ajouter un espace intérieur */
     border-radius: 10px; /* Arrondir les coins */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajouter une ombre */
     transition: background-color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    font-size: 12px;
 }
 
 .experience-section:hover {
