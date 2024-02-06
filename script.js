@@ -63,21 +63,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     experienceSections.forEach(section => {
         section.addEventListener('click', () => {
-            // Masquer les éléments affichés précédemment
-            const visibleDetails = document.querySelector('.experience-section .details.show');
-            if (visibleDetails) {
-                visibleDetails.classList.remove('show');
-            }
-            const visibleImage = document.querySelector('.experience-section .image-container.show');
-            if (visibleImage) {
-                visibleImage.classList.remove('show');
-            }
+            // Masquer les détails de toutes les autres sections
+            experienceSections.forEach(otherSection => {
+                if (otherSection !== section) {
+                    otherSection.querySelector('.details').classList.remove('show');
+                    otherSection.querySelector('.image-container').classList.remove('show');
+                }
+            });
 
-            // Afficher les éléments de cette section
-            const details = section.querySelector('.experience-details .details');
+            // Afficher les détails de cette section
+            const details = section.querySelector('.details');
             const image = section.querySelector('.image-container');
-            details.classList.add('show');
-            image.classList.add('show');
+            details.classList.toggle('show');
+            image.classList.toggle('show');
         });
     });
 });

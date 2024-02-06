@@ -1,4 +1,4 @@
-/* Couleurs */
+/* GENERAL */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -63,6 +63,9 @@ main {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #001f3f; /* Couleur de fond pour le pied de page */
     padding: 20px 0;
     color: #fff; /* Couleur de texte pour le pied de page */
@@ -78,7 +81,7 @@ footer .social-links {
 }
 
 footer .social-links a {
-    color: #333;
+    color: #fff;
     font-size: 24px;
     margin-right: 20px;
     transition: color 0.3s;
@@ -88,40 +91,9 @@ footer .social-links a:hover {
     color: #005b96; /* Changement de couleur au survol */
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Contenu spécifique à chaque page */
+/* EVERY PAGE */
 section {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .container h2 {
@@ -135,65 +107,69 @@ section {
     font-size: 16px;
 }
 
-/* Styles spécifiques pour les expériences et formations */
-.experience-info h3,
-.formation-info h3 {
-    color: #7b5a2b; /* Couleur de titre pour les expériences et formations */
+/* ACCUEIL */
+
+/* Nouvelle classe pour la section héros */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.experience-info .description,
-.formation-info .description {
-    color: #333; /* Couleur de texte pour les descriptions */
+/* Style de la nouvelle image héros */
+.hero-image {
+    width: 45%; /* Largeur de l'image héros */
+    height: 100vh; /* Hauteur de la fenêtre d'affichage */
+    background-image: url('chemin/vers/votre-image.jpg'); /* Remplacez 'chemin/vers/votre-image.jpg' par le chemin de votre image */
+    background-size: cover;
+    background-position: center;
 }
 
-/* Style du Bouton dépliant */
-
-.btn-more-info {
-    background-color: #7b5a2b;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Style du contenu héros */
+.hero-content {
+    width: 45%; /* Largeur du contenu héros */
+    padding: 0 20px;
+    text-align: center;
+    color: #fff; /* Couleur du texte */
 }
 
-.btn-more-info:hover {
-    background-color: #001f3f;
 
+
+
+/* EXPERIENCES */
+
+.experience-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
-
-/* Mise en page des expériences */
 
 .experience-section {
     width: 80%; /* Ajuster la largeur selon vos besoins */
     max-width: 800px; /* Largeur maximale pour éviter que la section ne devienne trop large */
     margin: 20px auto; /* Centrer horizontalement */
-    padding: 20px; /* Ajouter un espace intérieur */
+    padding: 15px; /* Ajouter un espace intérieur */
     border-radius: 10px; /* Arrondir les coins */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajouter une ombre */
     transition: background-color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .experience-section:hover {
     background-color: #f0f0f0; /* Changer la couleur de fond au survol */
-    transform: translateY(-5px); /* Déplacer légèrement la section vers le haut */
+    transform: translateY(-4px); /* Déplacer légèrement la section vers le haut */
 }
 
 
 /* Styles spécifiques aux sections d'expérience */
 
 
-.experience-section:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
 .experience-details {
     width: 50%;
-    padding: 20px;
+    padding: 15px;
 }
 
 .experience-details h3 {
@@ -226,6 +202,8 @@ section {
     background-color: #f0f0f0;
     transform: translateY(-5px);
 }
+
+/* FORMATIONS */
 
 .formation {
     display: flex;
