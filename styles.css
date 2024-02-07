@@ -212,9 +212,10 @@ section {
 /* FORMATIONS */
 
 .formation {
-    display: flex;
+    display: grid;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
+    padding-top: 50px;
 }
 
 .formation-info {
@@ -232,27 +233,16 @@ section {
     font-size: 16px;
     color: #888;
     max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
 }
 
-.formation-more {
-    width: 120px;
+
+#formations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
-}
-
-.formation-more a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4a90e2;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.formation-more a:hover {
-    background-color: #357dc6;
+    height: 800px;
+    width: 100%;
+    margin-top: 160px;
 }
 /* Cacher les détails par défaut */
 .details,
@@ -263,3 +253,17 @@ section {
 .show {
     display: block;
 }
+
+/* COMPETENCES */
+
+.competence {
+    margin-top: -40px;
+    display: grid;
+}
+
+.competence > img   {
+    width: 120px;
+    height: 120px;
+    padding: 35px;
+}
+
