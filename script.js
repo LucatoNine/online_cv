@@ -43,19 +43,6 @@ document.querySelectorAll('.experience-more a').forEach(item => {
     });
 });
 
-document.querySelectorAll('.formation-more a').forEach(item => {
-    item.addEventListener('click', event => {
-        const formation = item.closest('.formation');
-        const description = formation.querySelector('.description');
-        if (description.style.maxHeight) {
-            description.style.maxHeight = null;
-            item.innerText = 'En savoir plus';
-        } else {
-            description.style.maxHeight = description.scrollHeight + "px";
-            item.innerText = 'Réduire';
-        } 
-    });
-});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -78,3 +65,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Afficher et cacher le numéro de téléphone & email
+function showNumber() {
+    document.getElementById("phone-number").style.display = "block";
+}
+
+function hideNumber() {
+    document.getElementById("phone-number").style.display = "none";
+}
+
+function showEmail() {
+    document.getElementById("email-contact").style.display = "block";
+}
+
+function hideEmail() {
+    document.getElementById("email-contact").style.display = "none";
+}

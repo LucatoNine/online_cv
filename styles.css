@@ -278,3 +278,64 @@ section {
 .competence > img:hover{
     transform: translateY(-10px);
 }
+
+
+
+/* CONTACT */
+
+
+.container-contact{
+    text-align: center;
+    margin: 50px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+    margin: 100px;
+    
+}
+
+.contact-item {
+    padding: 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 30px 30px;
+
+    cursor: pointer;
+    color: #001f3f;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-item:hover {
+    background-color: #001f3f;
+    color: #fff;
+}
+
+.contact-mail   {
+    padding: 10px 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 30px 30px;
+    cursor: pointer;
+    color: #001f3f;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-mail:hover {
+    background-color: #001f3f;
+    color: #fff;
+}
+
+.number {
+    display: none;
+    font-weight: bold;
+
+}
+
+.mail   {
+    display: none;
+    font-weight: bold;
+}
